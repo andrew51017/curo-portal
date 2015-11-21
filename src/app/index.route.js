@@ -14,6 +14,13 @@
         controllerAs: 'controller',
         css: 'app/landing/css/landing.css'
       })
+      .when('/dashboard', {
+        title: 'Dashboard',
+        templateUrl: 'app/dashboard/dashboard.html',
+        controller: 'DashboardController',
+        controllerAs: 'controller',
+        css: 'app/dashboard/css/dashboard.css'
+      })
       .otherwise({
         redirectTo: '/'
       });
