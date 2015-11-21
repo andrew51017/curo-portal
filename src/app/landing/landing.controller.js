@@ -6,7 +6,7 @@
     .controller('LandingController', LandingController);
 
   /** @ngInject */
-  function LandingController($log) {
+  function LandingController($log, ApplicationUser) {
     var controller = this;
     controller.text = "Hello";
     ApplicationUser.login({username: 'neil.armstrong', password: 'password'}, function(err, accessToken) {
