@@ -14,12 +14,21 @@
         controllerAs: 'controller',
         css: 'app/landing/css/landing.css'
       })
+<<<<<<< HEAD
       .when('/login', {
           title : 'Curo | Login',
           templateUrl: 'app/login/login.html',
           controller: 'LoginController',
           controllerAs: 'controller',
           css: 'app/login/css/login.css'
+=======
+      .when('/dashboard', {
+        title: 'Dashboard',
+        templateUrl: 'app/dashboard/dashboard.html',
+        controller: 'DashboardController',
+        controllerAs: 'controller',
+        css: 'app/dashboard/css/dashboard.css'
+>>>>>>> origin/master
       })
       .otherwise({
         redirectTo: '/'
