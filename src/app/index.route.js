@@ -15,11 +15,12 @@
         css: 'app/landing/css/landing.css'
       })
       .when('/login', {
-          title : 'Curo | Login',
+          title: 'Curo | Login',
           templateUrl: 'app/login/login.html',
           controller: 'LoginController',
           controllerAs: 'controller',
           css: 'app/login/css/login.css'
+      })
       .when('/dashboard', {
         title: 'Dashboard',
         templateUrl: 'app/dashboard/dashboard.html',
