@@ -166,7 +166,6 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default {
-    border-color: transparent;
     background-color: #222;
 }
 
@@ -212,14 +211,14 @@ fieldset[disabled] .btn-xl.active {
     color: #fed136;
 }
 
-.navbar-default .navbar-nav>.active>a {
+.navbar-default .navbar-nav > .active > a {
     border-radius: 0;
     color: #fff;
     background-color: #fed136;
 }
 
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
     color: #fff;
     background-color: #fec503;
 }
@@ -228,7 +227,6 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         padding: 25px 0;
         border: 0;
-        background-color: transparent;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -256,6 +254,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 header {
+    margin-top: 100px;
     text-align: center;
     color: #fff;
     background-attachment: scroll;
@@ -344,7 +343,6 @@ footer {
     text-align: center;
 }
 
-footer span.copyright {
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+footer span.footer-text {
     line-height: 40px;
 }
