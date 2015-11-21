@@ -6,7 +6,7 @@
 
     beforeEach(module('curoPortal'));
     beforeEach(inject(function(_$controller_) {
-      controller = _$controller_('MainController');
+      controller = _$controller_('LandingController');
     }));
   });
 })();

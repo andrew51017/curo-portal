@@ -3,11 +3,10 @@
 
   angular
     .module('curoPortal')
-    .controller('MainController', MainController);
+    .controller('LandingController', LandingController);
 
   /** @ngInject */
-  function MainController($log) {
+  function LandingController($log) {
     var controller = this;
-    controller.text = "Hello";
   }
 })();

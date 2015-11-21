@@ -8,9 +8,11 @@
   function routeConfig($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'MainController'
+        title : 'Curo',
+        templateUrl: 'app/landing/landing.html',
+        controller: 'LandingController',
+        controllerAs: 'controller',
+        css: 'app/landing/css/landing.css'
       })
       .otherwise({
         redirectTo: '/'
