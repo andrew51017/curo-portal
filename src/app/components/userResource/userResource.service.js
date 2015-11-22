@@ -3,19 +3,19 @@
 
   angular
     .module('curoPortal')
-    .factory('UserSession', userSession);
+    .factory('UserResource', userResource);
 
   /** @ngInject */
-  function userSession($cookies, $location, Restaurant) {
-    var userSessionService = this;
+  function userResource($cookies, $location, Restaurant) {
+    var userResource = this;
     var cachedUser = undefined;
 
-    userSessionService.setUser = function(user) {
+    userResource.setUser = function(user) {
       $cookies.putObject('user', user);
       cachedUser = user
     };
 
-    userSessionService.getUser = function() {
+    userResource.getUser = function() {
       if (cachedUser === undefined) {
         cachedUser = $cookies.getObject('user');
       }
@@ -27,18 +27,18 @@
       return cachedUser;
     };
 
-    userSessionService.getRestaurant = function(success) {
+    userResource.getRestaurant = function(success) {
       return Restaurant.findOne(
         {
           filter: {
             where: {
-              user_id: userSessionService.getUser().id
+              user_id: userResource.getUser().id
             }
           }
         }
       ).$promise.then(success);
     };
 
-    return this;
+    return userResource;
   }
 })();

@@ -6,10 +6,10 @@
     .controller('ProfileController', ProfileController);
 
   /** @ngInject */
-  function ProfileController($log, UserSession, ApplicationUser, Restaurant) {
+  function ProfileController($log, UserResource, ApplicationUser, Restaurant) {
     var controller = this;
-    controller.user = UserSession.getUser();
-    UserSession.getRestaurant(function(restaurant) {
+    controller.user = UserResource.getUser();
+    UserResource.getRestaurant(function(restaurant) {
       controller.restaurant = restaurant;
     });
 

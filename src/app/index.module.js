@@ -14,5 +14,8 @@
     'lbServices',
     'door3.css',
     'ui.calendar',
-    'google.places']);
+    'google.places',
+    'ui.select',
+    'ngSanitize'
+  ]);
 })();

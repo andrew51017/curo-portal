@@ -6,14 +6,14 @@
         .controller('LoginController', LoginController);
 
     /** @ngInject */
-    function LoginController($log, $location, UserSession, ApplicationUser) {
+    function LoginController($log, $location, UserResource, ApplicationUser) {
         var controller = this;
         controller.alerts = [];
 
         controller.login = function (username, password) {
             ApplicationUser.login({username: username, password: password}, function(response) {
                 if (response.user !== undefined) {
-                  UserSession.setUser(response.user);
+                  UserResource.setUser(response.user);
                   $location.path('/dashboard');
                 }
             }, function() {

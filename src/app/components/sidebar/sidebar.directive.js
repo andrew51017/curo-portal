@@ -24,9 +24,9 @@
     }
 
     /** @ngInject */
-    function Controller(UserSession) {
+    function Controller(UserResource) {
       var controller = this;
-      controller.user = UserSession.getUser();
+      controller.user = UserResource.getUser();
     }
   }
 })();
