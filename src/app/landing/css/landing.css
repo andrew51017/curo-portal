@@ -35,6 +35,14 @@ h6 {
     font-weight: 700;
 }
 
+/* Fix for Navbar button issue */
+.btn-success:hover,
+.btn-success:focus{
+  color: #FFF !important;
+  background-color: #449D44 !important;
+  border-color: #398439 !important;
+}
+
 .img-centered {
     margin: 0 auto;
 }
