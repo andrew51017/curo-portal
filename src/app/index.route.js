@@ -26,6 +26,10 @@
         controller: 'RegisterController',
         controllerAs: 'controller'
       })
+      .when('/logout', {
+        controller: 'LogoutController',
+        controllerAs: 'controller'
+      })
       .when('/profile', {
         title: 'Curo | Profile',
         templateUrl: 'app/profile/profile.html',
