@@ -6,17 +6,32 @@
     .controller('MenuController', MenuController);
 
   /** @ngInject */
-  function MenuController($log, MenuResource) {
+  function MenuController($log, UserResource, MenuResource) {
     var controller = this;
+    var restaurantId;
 
+    UserResource.getRestaurant(function (restaurant) {
+      restaurantId = restaurant.id;
+      loadMenuItems();
+    });
 
-    controller.menuItems = [
-      {type: 'Starter', name: 'Duck', price: '2.50'},
-      {type: 'Starter', name: 'Soup', price: '2.50'},
-      {type: 'Main', name: 'Steak', price: '2.50'},
-      {type: 'Main', name: 'Pizza', price: '2.50'},
-      {type: 'Dessert', name: 'Ice-cream', price: '2.50'},
-      {type: 'Dessert', name: 'Cake', price: '2.50'}
-    ]
+    function loadMenuItems(){
+      MenuResource.loadMenu(restaurantId, function(menuItems) {
+        controller.menuItems = menuItems;
+      });
+    }
+
+    controller.saveMenuItem = function(menuItem) {
+      menuItem.restaurant_id = restaurantId;
+      MenuResource.saveMenuItem(menuItem, function() {
+        loadMenuItems();
+      })
+    };
+
+    controller.deleteMenuItem = function(menuItem) {
+      MenuResource.deleteMenuItem(menuItem, function() {
+        loadMenuItems();
+      })
+    };
   }
 })();

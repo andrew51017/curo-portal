@@ -10,12 +10,16 @@
 
     <table class="table table-bordered table-striped">
       <tr>
-        <th class="col-md-3">Type</th>
-        <th class="col-md-3">Name</th>
-        <th class="col-md-3">Price</th>
-        <th class="col-md-2"></th>
+        <th class="col-md-2">Order</th>
+        <th class="col-md-2">Type</th>
+        <th class="col-md-2">Name</th>
+        <th class="col-md-2">Price</th>
+        <th class="col-md-1"></th>
       </tr>
       <tr ng-repeat="menuItem in controller.menuItems">
+        <td>
+          <input type="number" ng-model="menuItem.order" placeholder="Order" class="form-control" required>
+        </td>
         <td>
           <select ng-model="menuItem.type" class="form-control">
             <option>Starter</option>
@@ -30,11 +34,14 @@
           <input type="text" class="form-control" ng-model="menuItem.price" placeholder="Price" required>
         </td>
         <td>
-          <button type="submit" class="btn btn-success" ng-click="saveMenuItem(menuItem)">Save</button>
-          <button type="submit" class="btn btn-danger" ng-click="removeMenuItem(menuItem)">Delete</button>
+          <button type="submit" class="btn btn-success" ng-click="controller.saveMenuItem(menuItem)">Save</button>
+          <button type="submit" class="btn btn-danger" ng-click="controller.deleteMenuItem(menuItem)">Delete</button>
         </td>
       </tr>
       <tr>
+        <td>
+          <input type="number" ng-model="controller.newMenuItem.order" placeholder="Order" class="form-control" required>
+        </td>
         <td>
           <select ng-model="controller.newMenuItem.type" class="form-control">
             <option>Starter</option>
@@ -49,7 +56,7 @@
           <input type="text" class="form-control" ng-model="controller.newMenuItem.price" placeholder="Price" required>
         </td>
         <td>
-          <button type="submit" class="btn btn-success" ng-click="createMenuItem(controller.newMenuItem)">Create</button>
+          <button type="submit" class="btn btn-success" ng-click="controller.saveMenuItem(controller.newMenuItem)">Create</button>
           <button type="submit" class="btn btn-danger" ng-click="controller.newMenuItem = {}">Clear</button>
         </td>
       </tr>
