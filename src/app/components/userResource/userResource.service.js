@@ -27,6 +27,11 @@
       return cachedUser;
     };
 
+    userResource.logout = function() {
+      $cookies.remove('user');
+      cachedUser = undefined;
+    };
+
     userResource.getRestaurant = function(success) {
       return Restaurant.findOne(
         {
