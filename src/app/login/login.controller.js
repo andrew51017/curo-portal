@@ -6,15 +6,16 @@
         .controller('LoginController', LoginController);
 
     /** @ngInject */
-    function LoginController($log, $location, $scope, ApplicationUser) {
+    function LoginController($log, $location, UserSession, ApplicationUser) {
         var controller = this;
-        $scope.alerts = [];
+        controller.alerts = [];
         controller.login = function (username, password) {
-            ApplicationUser.login({username: username, password: password}, function(err, accessToken) {
-                if (accessToken !== undefined) {
-                    $location.path('/dashboard');
+            ApplicationUser.login({username: username, password: password}, function(response) {
+                if (response.user !== undefined) {
+                  UserSession.setUser(response.user);
+                  $location.path('/dashboard');
                 } else {
-                    // display error
+                  $log.log('Could not authenticate');
                 }
             });
         };

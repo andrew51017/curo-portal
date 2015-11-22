@@ -9,13 +9,16 @@
           <form role="form" ng-submit="controller.register()">
             <fieldset>
               <div class="form-group">
-                <input class="form-control" placeholder="Email" name="email" type="email" ng-model="email" required autofocus>
+                <input class="form-control" placeholder="Email" name="email" type="email" ng-model="controller.user.email" required autofocus>
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Password" name="password" type="password" ng-model="password" required>
+                <input class="form-control" placeholder="Password" name="password" type="password" ng-model="controller.user.password" required>
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Name" name="name" type="text" ng-model="name" required autofocus>
+                <input class="form-control" placeholder="First name" name="firstName" type="text" ng-model="controller.user.firstName" required autofocus>
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Last name" name="lastName" type="text" ng-model="controller.user.lastName" required autofocus>
               </div>
               <button type="submit" class="btn btn-lg btn-success btn-block">Register</button>
             </fieldset>

@@ -24,10 +24,9 @@
     }
 
     /** @ngInject */
-    function Controller() {
+    function Controller(UserSession) {
       var controller = this;
-      controller.user = {name: 'Test McBob'};
-
+      controller.user = UserSession.getUser();
     }
   }
 })();
