@@ -37,7 +37,8 @@
         title: 'Curo | Dashboard',
         templateUrl: 'app/dashboard/dashboard.html',
         controller: 'DashboardController',
-        controllerAs: 'controller'
+        controllerAs: 'controller',
+        css: 'app/dashboard/css/dashboard.css'
       })
       .when('/bookings', {
         title: 'Curo | Bookings',
