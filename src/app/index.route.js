@@ -30,7 +30,8 @@
         title: 'Curo | Profile',
         templateUrl: 'app/profile/profile.html',
         controller: 'ProfileController',
-        controllerAs: 'controller'
+        controllerAs: 'controller',
+        css: 'app/profile/css/profile.css'
       })
       .when('/dashboard', {
         title: 'Curo | Dashboard',

@@ -1,0 +1,9 @@
+.hours label {
+  margin-top: 35px;
+}
+
+.glyphicon-chevron-up,
+.glyphicon-chevron-down
+{
+  right: 10px;
+}

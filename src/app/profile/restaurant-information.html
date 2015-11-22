@@ -18,18 +18,19 @@
               <input type="text" g-places-autocomplete ng-model="controller.restaurant.location" class="form-control" id="restaurant-location" placeholder="Restaurant location">
             </div>
           </div>
-          <div class="form-group">
-            <label for="opening-hours" class="col-sm-2 control-label">Opening hours</label>
-            <div class="col-sm-8 input-group">
-              <timepicker id="opening-hours" ng-model="controller.restaurant.opening_hours" ng-change="changed()" hour-step="openingHour"
-                          minute-step="openingMinute" show-meridian="ismeridian"></timepicker>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="closing-hours" class="col-sm-2 control-label">Closing hours</label>
-            <div class="col-sm-8 input-group">
-              <timepicker id="closing-hours" ng-model="controller.restaurant.closing_hours" ng-change="changed()" hour-step="closingHour"
-                          minute-step="closingMinute" show-meridian="ismeridian"></timepicker>
+          <div class="form-group hours">
+            <div class="col-md-12">
+              <label for="opening-hours" class="col-sm-2 control-label">Opening hours</label>
+              <div class="col-sm-2">
+                <timepicker id="opening-hours" ng-model="controller.restaurant.opening_hours" ng-change="changed()" hour-step="openingHour"
+                            minute-step="openingMinute" show-meridian="ismeridian"></timepicker>
+              </div>
+
+              <label for="closing-hours" class="col-sm-2 control-label">Closing hours</label>
+              <div class="col-sm-4">
+                <timepicker id="closing-hours" ng-model="controller.restaurant.closing_hours" ng-change="changed()" hour-step="closingHour"
+                            minute-step="closingMinute" show-meridian="ismeridian"></timepicker>
+              </div>
             </div>
           </div>
           <div class="form-group">
