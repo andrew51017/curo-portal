@@ -18,8 +18,13 @@
           title: 'Curo | Login',
           templateUrl: 'app/login/login.html',
           controller: 'LoginController',
-          controllerAs: 'controller',
-          css: 'app/login/css/login.css'
+          controllerAs: 'controller'
+      })
+      .when('/register', {
+        title: 'Curo | Register',
+        templateUrl: 'app/register/register.html',
+        controller: 'RegisterController',
+        controllerAs: 'controller'
       })
       .when('/dashboard', {
         title: 'Dashboard',

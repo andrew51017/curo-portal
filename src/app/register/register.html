@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-default auth-form-panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">Create an account</h3>
+        </div>
+        <div class="panel-body">
+          <form role="form" ng-submit="controller.register()">
+            <fieldset>
+              <div class="form-group">
+                <input class="form-control" placeholder="Email" name="email" type="email" ng-model="email" required autofocus>
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Password" name="password" type="password" ng-model="password" required>
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Name" name="name" type="text" ng-model="name" required autofocus>
+              </div>
+              <button type="submit" class="btn btn-lg btn-success btn-block">Register</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
