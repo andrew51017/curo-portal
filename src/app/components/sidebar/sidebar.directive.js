@@ -24,9 +24,14 @@
     }
 
     /** @ngInject */
-    function Controller(UserResource) {
+    function Controller(UserResource, $location) {
       var controller = this;
       controller.user = UserResource.getUser();
+
+      controller.logout = function() {
+        UserResource.logout();
+        $location.path('');
+      }
     }
   }
 })();

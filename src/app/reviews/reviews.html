@@ -8,8 +8,15 @@
       </div>
     </div>
 
-    <div class="row">
-
-    </div>
+    <table class="table table-bordered table-striped">
+      <tr>
+        <th class="col-md-2">Rating</th>
+        <th class="col-md-2">Comment</th>
+      </tr>
+      <tr ng-repeat="review in controller.reviews">
+        <td>{{review.rating}}</td>
+        <td>{{review.comment}}</td>
+      </tr>
+    </table>
   </div>
 </div>
