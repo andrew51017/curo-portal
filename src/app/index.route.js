@@ -27,7 +27,7 @@
         controllerAs: 'controller'
       })
       .when('/dashboard', {
-        title: 'Dashboard',
+        title: 'Curo | Dashboard',
         templateUrl: 'app/dashboard/dashboard.html',
         controller: 'DashboardController',
         controllerAs: 'controller',

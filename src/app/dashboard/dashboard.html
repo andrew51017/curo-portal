@@ -1,25 +1,62 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<div id="wrapper">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Curo</a>
+      <a class="navbar-brand" href="#/dashboard">Curo Portal</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a ng-click="showNotifications()">Notification</a>
-        </li>
-        <li>
-          <a ng-click="showAccount()">Account</a>
-        </li>
-      </ul>
+    <ul class="nav navbar-top-links navbar-right">
+      <li class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-user">
+          <li><a href="#/profile"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Profile</a>
+          </li>
+          </li>
+          <li class="divider"></li>
+          <li><a href="#/"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Logout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="navbar-default sidebar" role="navigation">
+      <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+          <li>
+            <a href="#/dashboard"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Dashboard</a>
+          </li>
+          <li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Dashboard</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Booking overview
+          </div>
+          <div class="panel-body">
+            <div ui-calendar></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</div>
