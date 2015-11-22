@@ -26,16 +26,35 @@
         controller: 'RegisterController',
         controllerAs: 'controller'
       })
+      .when('/profile', {
+        title: 'Curo | Profile',
+        templateUrl: 'app/profile/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'controller'
+      })
       .when('/dashboard', {
         title: 'Curo | Dashboard',
         templateUrl: 'app/dashboard/dashboard.html',
         controller: 'DashboardController',
         controllerAs: 'controller'
       })
-      .when('/profile', {
-        title: 'Curo | Profile',
-        templateUrl: 'app/profile/profile.html',
-        controller: 'ProfileController',
+      .when('/bookings', {
+        title: 'Curo | Bookings',
+        templateUrl: 'app/bookings/bookings.html',
+        controller: 'BookingsController',
+        controllerAs: 'controller'
+      })
+      .when('/menu', {
+        title: 'Curo | Menu',
+        templateUrl: 'app/menu/menu.html',
+        controller: 'MenuController',
+        controllerAs: 'controller',
+        css: 'app/menu/css/menu.css'
+      })
+      .when('/reviews', {
+        title: 'Curo | Reviews',
+        templateUrl: 'app/reviews/reviews.html',
+        controller: 'ReviewsController',
         controllerAs: 'controller'
       })
       .otherwise({
