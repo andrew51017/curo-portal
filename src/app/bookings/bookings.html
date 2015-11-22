@@ -8,8 +8,15 @@
       </div>
     </div>
 
-    <div class="row">
-
-    </div>
+    <table class="table table-bordered table-striped">
+      <tr>
+        <th class="col-md-2">Date</th>
+        <th class="col-md-2">Size</th>
+      </tr>
+      <tr ng-repeat="booking in controller.bookings">
+        <td>{{booking.date}}</td>
+        <td>{{booking.size}}</td>
+      </tr>
+    </table>
   </div>
 </div>
