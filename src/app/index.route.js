@@ -30,8 +30,13 @@
         title: 'Curo | Dashboard',
         templateUrl: 'app/dashboard/dashboard.html',
         controller: 'DashboardController',
-        controllerAs: 'controller',
-        css: 'app/dashboard/css/dashboard.css'
+        controllerAs: 'controller'
+      })
+      .when('/profile', {
+        title: 'Curo | Profile',
+        templateUrl: 'app/profile/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'controller'
       })
       .otherwise({
         redirectTo: '/'
